@@ -94,8 +94,8 @@ resource "megaport_vxc" "aws_vxc_1" {
 data "megaport_partner" "google_port_1_sin" {
   connect_type = "GOOGLE"
   company_name = "Google inc.."
-  product_name = "Singapore (sin-zone1-2260)"
-  location_id  = data.megaport_location.location_1.id
+  product_name = "Sydney (syd-zone1-1605)"
+  location_id  = data.megaport_location.location_2.id
 }
 
 resource "megaport_vxc" "google_vxc_1" {
