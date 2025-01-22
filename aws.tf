@@ -43,7 +43,7 @@ resource "aws_dx_gateway" "aws_dx_gateway_1" {
 }
 
 resource "aws_dx_gateway_association" "dx_gateway_association" {
-  dx_gateway_id         = aws_dx_gateway.dx_gateway_1.id
+  dx_gateway_id         = aws_dx_gateway.aws_dx_gateway_1.id
   associated_gateway_id = aws_vpn_gateway.aws_vpn_gateway_1.id
 }
 
