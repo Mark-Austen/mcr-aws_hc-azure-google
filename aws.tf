@@ -48,7 +48,7 @@ resource "aws_dx_connection_confirmation" "confirmation" {
 
 resource "aws_dx_private_virtual_interface" "aws_dx_private_virtual_interface_1" {
   connection_id     = megaport_vxc.aws_vxc_1.csp_connections[1].connection_id
-  dx_gateway_id     = aws_dx_gateway.dx_gateway_1.id
+  dx_gateway_id     = aws_dx_gateway.aws_dx_gateway_1.id
   name              = var.aws_dx_vif_1_name
   vlan              = megaport_vxc.aws_vxc_1.b_end.vlan
   address_family    = "ipv4"
