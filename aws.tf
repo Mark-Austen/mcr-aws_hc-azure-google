@@ -42,6 +42,11 @@ resource "aws_dx_gateway" "aws_dx_gateway_1" {
   amazon_side_asn = "64512"
 }
 
+resource "aws_dx_gateway_association" "dx_gateway_association" {
+  dx_gateway_id         = aws_dx_gateway.dx_gateway_1.id
+  associated_gateway_id = aws_vpn_gateway.aws_vpn_gateway_1.id
+}
+
 resource "aws_dx_connection_confirmation" "confirmation" {
   connection_id = megaport_vxc.aws_vxc_1.csp_connections[1].connection_id
 }
